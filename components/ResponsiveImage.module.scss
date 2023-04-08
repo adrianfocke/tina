@@ -1,0 +1,11 @@
+@import "../styles/constants.scss";
+
+.image {
+    height: 100%;
+    position: relative;
+    width: 100%;
+
+    &.withBoxShadow {
+        box-shadow: $box-shadow;
+    }
+}

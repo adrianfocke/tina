@@ -1,0 +1,20 @@
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+$font-family: 'Inter', sans-serif;
+
+
+// Color palette
+$primary: #1e1ee6;
+$secondary: lightblue;
+$black: #02020f;
+$white: white;
+
+$primary-tint: lighten($primary, 20%);
+$secondary-tint: lighten($secondary, 15%);
+
+$box-shadow: $secondary-tint 0px 8px 24px;
