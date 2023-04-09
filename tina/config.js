@@ -13,6 +13,48 @@ const schema = defineSchema({
           label: "Main Content",
           type: "rich-text",
           isBody: true,
+          templates: [
+            {
+              label: "Image",
+              name: "Image",
+              type: "object",
+              fields: [
+                {
+                  label: "Image name",
+                  name: "image",
+                  type: "string",
+                },
+                {
+                  label: "Height",
+                  name: "height",
+                  type: "number",
+                },
+                {
+                  label: "Height unit",
+                  name: "heightUnit",
+                  type: "string",
+                  options: ["px", "%", "vh"],
+                },
+                {
+                  label: "Width",
+                  name: "width",
+                  type: "number",
+                },
+                {
+                  label: "Width unit",
+                  name: "widthUnit",
+                  type: "string",
+                  options: ["px", "%", "vw"],
+                },
+                {
+                  label: "Style",
+                  name: "objectFit",
+                  type: "string",
+                  options: ["cover", "stretch"],
+                },
+              ],
+            },
+          ],
         },
       ],
       ui: {
@@ -35,13 +77,21 @@ const schema = defineSchema({
           name: "title",
         },
         {
-          type: "string",
+          type: "rich-text",
           label: "Blog Post Body",
           name: "body",
           isBody: true,
-          ui: {
-            component: "textarea",
-          },
+          templates: [
+            {
+              name: "Callout",
+              label: "Callout",
+              fields: [{
+                name: "message",
+                label: "Message",
+                type: "string"
+              }
+            ]}
+          ],
         },
       ],
       ui: {

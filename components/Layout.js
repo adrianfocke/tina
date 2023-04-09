@@ -3,8 +3,6 @@ import Head from "next/head";
 import ResponsiveImage from "./ResponsiveImage";
 import { APP_DESCRIPTION, APP_TITLE } from "../constants";
 
-import muffin from "../public/uploads/muffin.jpg";
-
 export const Layout = (props) => {
   return (
     <>
@@ -26,9 +24,16 @@ export const Layout = (props) => {
 
       <main>
         {props.children}
-        <div style={{ width: "100%", height: "50vh" }}>
-          <ResponsiveImage image={muffin} withBoxShadow priority />
-        </div>
+        {/* <ResponsiveImage
+          height={45}
+          heightUnit={"px"}
+          image={"muffin.jpg"}
+          objectFit={"cover"}
+          priority={true}
+          width={45}
+          widthUnit={"px"}
+          withBoxShadow={true}
+        /> */}
       </main>
     </>
   );
