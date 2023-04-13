@@ -24,13 +24,14 @@ export default ({
   widthUnit,
   withBoxShadow,
 }: ResponsiveImageProps) => (
-  <div
-    className={`${styles.image} ${withBoxShadow && styles.withBoxShadow}`}
-    style={{
-      height: `${height}${heightUnit}`,
-      width: `${width}${widthUnit}`,
-    }}
-  >
-    <Image src={""} layout="fill" objectFit={objectFit} priority={priority} />
-  </div>
+  <p>AAA</p>
+  // <div
+  //   className={`${styles.image} ${withBoxShadow && styles.withBoxShadow}`}
+  //   style={{
+  //     height: `${height}${heightUnit}`,
+  //     width: `${width}${widthUnit}`,
+  //   }}
+  // >
+  //   <Image src={""} layout="fill" objectFit={objectFit} priority={priority} />
+  // </div>
 );

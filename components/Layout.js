@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
-import ResponsiveImage from "./ResponsiveImage";
+import ResponsiveImage from "../blocks/ResponsiveImage";
 import { APP_DESCRIPTION, APP_TITLE } from "../constants";
 
 export const Layout = (props) => {

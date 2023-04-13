@@ -10,50 +10,65 @@ const schema = defineSchema({
       fields: [
         {
           name: "body",
-          label: "Main Content",
+          label: "Body",
           type: "rich-text",
-          isBody: true,
           templates: [
             {
-              label: "Image",
-              name: "Image",
-              type: "object",
+              name: "Callout",
+              label: "Callout",
+              ui: {
+                defaultItem: {
+                  text: "Lorem ipsum dolor sit amet.",
+                },
+              },
               fields: [
                 {
-                  label: "Image name",
-                  name: "image",
+                  name: "text",
+                  label: "Text",
                   type: "string",
-                },
-                {
-                  label: "Height",
-                  name: "height",
-                  type: "number",
-                },
-                {
-                  label: "Height unit",
-                  name: "heightUnit",
-                  type: "string",
-                  options: ["px", "%", "vh"],
-                },
-                {
-                  label: "Width",
-                  name: "width",
-                  type: "number",
-                },
-                {
-                  label: "Width unit",
-                  name: "widthUnit",
-                  type: "string",
-                  options: ["px", "%", "vw"],
-                },
-                {
-                  label: "Style",
-                  name: "objectFit",
-                  type: "string",
-                  options: ["cover", "stretch"],
                 },
               ],
             },
+            // {
+            //   label: "Image",
+            //   name: "Image",
+            //   type: "object",
+            //   fields: [
+            //     {
+            //       label: "Image name",
+            //       name: "image",
+            //       type: "string",
+            //     },
+            //     {
+            //       label: "Height",
+            //       name: "height",
+            //       type: "number",
+            //     },
+            //     {
+            //       label: "Height unit",
+            //       name: "heightUnit",
+            //       type: "string",
+            //       options: ["px", "%", "vh"],
+            //     },
+            //     {
+            //       label: "Width",
+            //       name: "width",
+            //       type: "number",
+            //     },
+            //     {
+            //       label: "Width unit",
+            //       name: "widthUnit",
+            //       type: "string",
+            //       options: ["px", "%", "vw"],
+            //     },
+            //     {
+            //       label: "Style",
+            //       name: "objectFit",
+            //       type: "string",
+            //       options: ["cover", "stretch"],
+            //     },
+            //   ],
+            // },
           ],
         },
       ],
@@ -85,12 +100,14 @@ const schema = defineSchema({
             {
               name: "Callout",
               label: "Callout",
-              fields: [{
-                name: "message",
-                label: "Message",
-                type: "string"
-              }
-            ]}
+              fields: [
+                {
+                  name: "message",
+                  label: "Message",
+                  type: "string",
+                },
+              ],
+            },
           ],
         },
       ],
