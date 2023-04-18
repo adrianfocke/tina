@@ -2,8 +2,6 @@ import { HeightUnit, WidthUnit } from "../types/units";
 import Image from "next/image";
 import styles from "./ResponsiveImage.module.scss";
 
-const muffin = require("../public/uploads/muffin.jpg");
-
 export type ResponsiveImageProps = {
   height: number;
   heightUnit: HeightUnit;
@@ -24,23 +22,21 @@ export default ({
   width,
   widthUnit,
   withBoxShadow,
-}: ResponsiveImageProps) => {
-  console.log("ResponsiveImage: ", height, image,);
-  return (
-    <div
-      className={`${styles.image} ${withBoxShadow && styles.withBoxShadow}`}
-      style={{
-        height: `${height}${heightUnit}`,
-        width: `${width}${widthUnit}`,
-        border: "1px solid red"
-      }}
-    >
-      <Image
-        src={muffin}
-        layout="fill"
-        objectFit={objectFit}
-        priority={priority}
-      />
-    </div>
-  );
-};
+}: ResponsiveImageProps): JSX.Element => (
+  <div
+    className={`${styles.image} ${withBoxShadow && styles.withBoxShadow}`}
+    style={{
+      height: `${height}${heightUnit}`,
+      width: `${width}${widthUnit}`,
+    }}
+  >
+    <Image
+      // TODO generalize this somewhere
+      style={{ borderRadius: "4px" }}
+      src={`${image}`}
+      layout="fill"
+      objectFit={objectFit}
+      priority={priority}
+    />
+  </div>
+);

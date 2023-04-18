@@ -1,3 +1,4 @@
+// TODO look into mixins
 $sm: 640px;
 $md: 768px;
 $lg: 1024px;
@@ -9,12 +10,19 @@ $font-family: 'Inter', sans-serif;
 
 
 // Color palette
-$primary: #1e1ee6;
-$secondary: lightblue;
+$primary: rgb(75 14 138);
+$secondary: rgb(21	108	237);
 $black: #02020f;
-$white: white;
+$white: #EEF6FC;
 
 $primary-tint: lighten($primary, 20%);
 $secondary-tint: lighten($secondary, 15%);
 
+// Padding
+$padding: 8px;
+$padding-double: calc($padding * 2);
+$padding-half: calc($padding / 2);
+
+// Other
 $box-shadow: $secondary-tint 0px 8px 24px;
+$border-radius: $padding-half;

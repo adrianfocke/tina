@@ -1,5 +1,31 @@
 @import "./constants.scss";
 
 body {
+    background: $primary;
     font-family: $font-family;
+}
+
+p, span, a, ul {
+    color: $white;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $secondary;
+}
+
+main, header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    flex-direction: row;
 }

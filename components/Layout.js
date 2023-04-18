@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
-import ResponsiveImage from "../blocks/ResponsiveImage";
 import { APP_DESCRIPTION, APP_TITLE } from "../constants";
+import styles from "./Layout.module.scss";
 
 export const Layout = (props) => {
   return (
@@ -14,26 +14,16 @@ export const Layout = (props) => {
 
       <header>
         <Link href="/">
-          <a>Home</a>
+          {/* // TODO think about applying classes, remove this one also */}
+          <a className={styles.links}>Homepage</a>
         </Link>
-        {" | "}
-        <Link href="/posts">
-          <a>Posts</a>
+        <Link href="/imprint">
+          <a className={styles.links}>Imprint</a>
         </Link>
       </header>
 
       <main>
         {props.children}
-        {/* <ResponsiveImage
-          height={45}
-          heightUnit={"px"}
-          image={"muffin.jpg"}
-          objectFit={"cover"}
-          priority={true}
-          width={45}
-          widthUnit={"px"}
-          withBoxShadow={true}
-        /> */}
       </main>
     </>
   );

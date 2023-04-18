@@ -53,7 +53,7 @@ const schema = defineSchema({
                   name: "widthUnit",
                   label: "Width unit",
                   type: "string",
-                  options: ["px", "%", "vh"],
+                  options: ["px", "%", "vw"],
                 },
                 {
                   label: "Style",
