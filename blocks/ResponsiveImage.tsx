@@ -13,6 +13,8 @@ export type ResponsiveImageProps = {
   withBoxShadow?: boolean;
 };
 
+const src = require("../public/uploads/joy.jpeg")
+
 export default ({
   height,
   heightUnit,
@@ -30,9 +32,8 @@ export default ({
       width: `${width}${widthUnit}`,
     }}
   >
-    <p>{String(image)}</p>
     <Image
-      src={`${image}`}
+      src={src}
       layout="fill"
       objectFit={objectFit}
       priority={priority}
