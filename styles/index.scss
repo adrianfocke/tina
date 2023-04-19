@@ -2,6 +2,7 @@
 
 body {
     background: $primary;
+    background: $gradient;
     font-family: $font-family;
 }
 
@@ -21,6 +22,7 @@ h6 {
 h1,
 h2 {
     color: $secondary;
+    padding: $padding-double;
 }
 
 main,

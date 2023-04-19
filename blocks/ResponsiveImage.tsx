@@ -31,8 +31,6 @@ export default ({
     }}
   >
     <Image
-      // TODO generalize this somewhere
-      style={{ borderRadius: "4px" }}
       src={`${image}`}
       layout="fill"
       objectFit={objectFit}

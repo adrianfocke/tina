@@ -15,7 +15,7 @@ export const Layout = (props) => {
       <header>
         <Link href="/">
           {/* // TODO think about applying classes, remove this one also */}
-          <a className={styles.links}>Homepage</a>
+          <a className={styles.links}>Home</a>
         </Link>
         <Link href="/imprint">
           <a className={styles.links}>Imprint</a>

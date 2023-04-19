@@ -15,58 +15,63 @@ const schema = defineSchema({
           isBody: true,
           templates: [
             {
-              name: "ResponsiveImage",
               label: "ResponsiveImage",
+              name: "ResponsiveImage",
               ui: {
                 defaultItem: {
-                  image: "/uploads/muffin.jpg",
                   height: 200,
                   heightUnit: "px",
+                  image: "/uploads/muffin.jpg",
+                  objectFit: "cover",
                   width: 200,
                   widthUnit: "px",
-                  objectFit: "cover",
+                  withBoxShadow: false,
                 },
               },
               fields: [
                 {
-                  name: "image",
                   label: "Background Image",
+                  name: "image",
                   type: "image",
                 },
                 {
-                  name: "height",
                   label: "Height",
+                  name: "height",
                   type: "number",
                 },
                 {
-                  name: "heightUnit",
                   label: "Height unit",
-                  type: "string",
+                  name: "heightUnit",
                   options: ["px", "%", "vh"],
+                  type: "string",
                 },
                 {
-                  name: "width",
                   label: "Width",
+                  name: "width",
                   type: "number",
                 },
                 {
-                  name: "widthUnit",
                   label: "Width unit",
-                  type: "string",
+                  name: "widthUnit",
                   options: ["px", "%", "vw"],
+                  type: "string",
                 },
                 {
                   label: "Style",
                   name: "objectFit",
+                  options: ["cover", "contain"],
                   type: "string",
-                  options: ["cover", "stretch"],
+                },
+                {
+                  label: "Shadow",
+                  name: "withBoxShadow",
+                  type: "boolean",
                 },
               ],
             },
             {
-              name: "Column",
               label: "Column",
-              // TODO default ui
+              name: "Column",
               fields: [
                 {
                   label: "Column One",
@@ -83,8 +88,8 @@ const schema = defineSchema({
                   name: "columnThree",
                   type: "rich-text",
                 },
-              ]
-            }
+              ],
+            },
           ],
         },
       ],

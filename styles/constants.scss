@@ -6,6 +6,8 @@ $large: 1024px;
 $xlarge: 1280px;
 $xxlarge: 1536px;
 
+// TODO think about themes AND how to style blocks
+
 @mixin medium {
     @media (max-width: #{$medium}) {
         @content;
@@ -15,12 +17,14 @@ $xxlarge: 1536px;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 $font-family: 'Inter', sans-serif;
 
+$factor: 4;
+$factor-percent: 4%;
 
 // Color palette
 $primary: rgb(75 14 138);
 $secondary: rgb(21 108 237);
 $black: #02020f;
-$white: rgb(252 253 251);
+$white: darken(rgb(252 253 251), $factor-percent);
 
 $primary-tint: lighten($primary, 20%);
 $secondary-tint: lighten($secondary, 15%);
@@ -33,5 +37,7 @@ $padding-half: calc($padding / 2);
 // Other
 $box-shadow: $secondary-tint 0px 8px 24px;
 $border-radius: $padding-half;
+$gradient: linear-gradient(275deg, $primary 0%, lighten($primary, $factor-percent) 50%, $primary 100%);
+
 
 $test: 1px solid red;
