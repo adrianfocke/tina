@@ -30,6 +30,7 @@ export default ({
       width: `${width}${widthUnit}`,
     }}
   >
+    <p>{image}</p>
     <Image
       src={`${image}`}
       layout="fill"
