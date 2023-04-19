@@ -1,3 +1,4 @@
+import { TinaMarkdownContent } from "tinacms/dist/rich-text";
 import Column, { ColumnProps } from "./Column";
 import ResponsiveImage, { ResponsiveImageProps } from "./ResponsiveImage";
 
@@ -28,7 +29,7 @@ const components = {
   },
   Column: (props) => {
     const { columnOne, columnTwo, columnThree } = props;
-    const columns: string[] = [];
+    const columns: TinaMarkdownContent[] = [];
 
     if (columnOne) {
       columns.push(columnOne);
