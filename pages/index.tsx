@@ -3,6 +3,8 @@ import { Layout } from "../components/Layout";
 import { useTina } from "tinacms/dist/react";
 import { client } from "../tina/__generated__/client";
 import ResponsiveImage, { ResponsiveImageProps } from "../blocks/ResponsiveImage";
+import Column, { ColumnProps } from "../blocks/Column";
+import components from "../blocks/all";
 
 export default function Home(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
@@ -11,57 +13,6 @@ export default function Home(props) {
     variables: props.variables,
     data: props.data,
   });
-
-  const components = {
-    ResponsiveImage: (props) => {
-      const {
-        height,
-        heightUnit,
-        image,
-        objectFit,
-        priority,
-        width,
-        widthUnit,
-        withBoxShadow,
-      } = props as ResponsiveImageProps;
-      return (
-        <ResponsiveImage
-          height={height}
-          heightUnit={heightUnit}
-          image={image}
-          objectFit={objectFit}
-          priority={priority}
-          width={width}
-          widthUnit={widthUnit}
-          withBoxShadow={withBoxShadow}
-        />
-      );
-    },
-    // ResponsiveImage: (props) => {
-    //   const {
-    //     height,
-    //     heightUnit,
-    //     image,
-    //     objectFit,
-    //     priority,
-    //     width,
-    //     widthUnit,
-    //     withBoxShadow,
-    //   } = props as ResponsiveImageProps;
-    //   return (
-    //     <ResponsiveImage
-    //       height={height}
-    //       heightUnit={heightUnit}
-    //       image={image}
-    //       objectFit={objectFit}
-    //       priority={priority}
-    //       width={width}
-    //       widthUnit={widthUnit}
-    //       withBoxShadow={withBoxShadow}
-    //     />
-    //   );
-    // },
-  };
 
   const content = data.page.body;
   return (

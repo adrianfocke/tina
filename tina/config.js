@@ -63,6 +63,28 @@ const schema = defineSchema({
                 },
               ],
             },
+            {
+              name: "Column",
+              label: "Column",
+              // TODO default ui
+              fields: [
+                {
+                  label: "Column One",
+                  name: "columnOne",
+                  type: "rich-text",
+                },
+                {
+                  label: "Column Two",
+                  name: "columnTwo",
+                  type: "rich-text",
+                },
+                {
+                  label: "Column Three",
+                  name: "columnThree",
+                  type: "rich-text",
+                },
+              ]
+            }
           ],
         },
       ],

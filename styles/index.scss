@@ -5,25 +5,32 @@ body {
     font-family: $font-family;
 }
 
-p, span, a, ul {
+p,
+span,
+a,
+ul,
+div,
+h3,
+h4,
+h5,
+h6 {
     color: $white;
     text-decoration: none;
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
     color: $secondary;
 }
 
-main, header {
+main,
+header {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 90vw;
+    margin: 0 auto;
 }
 
 header {
