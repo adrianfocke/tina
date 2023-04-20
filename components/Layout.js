@@ -13,11 +13,11 @@ export const Layout = (props) => {
       </Head>
 
       <header>
-        <Link href="/">
+        <Link legacyBehavior href="/">
           {/* // TODO think about applying classes, remove this one also */}
           <a className={styles.links}>Home</a>
         </Link>
-        <Link href="/imprint">
+        <Link legacyBehavior href="/imprint">
           <a className={styles.links}>Imprint</a>
         </Link>
       </header>
