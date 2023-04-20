@@ -15,6 +15,8 @@ export type ResponsiveImageProps = {
 
 const src = require("../public/uploads/joy.jpeg")
 
+// TODO alt
+
 export default ({
   height,
   heightUnit,
@@ -32,6 +34,6 @@ export default ({
       width: `${width}${widthUnit}`,
     }}
   >
-    <Image src={src} objectFit={objectFit} priority={priority} fill sizes="100vw" />
+    <Image alt="IMAGE" src={src} objectFit={objectFit} priority={priority} fill sizes="100vw" />
   </div>
 );
