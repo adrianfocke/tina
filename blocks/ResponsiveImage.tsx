@@ -1,5 +1,5 @@
 import { HeightUnit, WidthUnit } from "../types/units";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "./ResponsiveImage.module.scss";
 
 export type ResponsiveImageProps = {
