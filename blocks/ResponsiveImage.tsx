@@ -1,5 +1,5 @@
 import { HeightUnit, WidthUnit } from "../types/units";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./ResponsiveImage.module.scss";
 
 export type ResponsiveImageProps = {
@@ -32,11 +32,6 @@ export default ({
       width: `${width}${widthUnit}`,
     }}
   >
-    <Image
-      src={src}
-      layout="fill"
-      objectFit={objectFit}
-      priority={priority}
-    />
+    <Image src={src} objectFit={objectFit} priority={priority} fill sizes="100vw" />
   </div>
 );
