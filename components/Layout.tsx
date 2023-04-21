@@ -11,6 +11,12 @@ export const Layout = (props) => {
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
+    <br /><br />
+
+    <main>
+      {props.children}
+    </main>
+
     <header>
       <Link href="/" className={styles.links}>
         {/* // TODO think about applying classes, remove this one also */}
@@ -20,9 +26,5 @@ export const Layout = (props) => {
         Imprint
       </Link>
     </header>
-
-    <main>
-      {props.children}
-    </main>
   </>;
 };
