@@ -1,5 +1,6 @@
 import { TinaMarkdown, TinaMarkdownContent } from "tinacms/dist/rich-text";
-import styles from "./Column.module.scss";
+import { StyleSheet } from "../types/other";
+import { STYLES_PADDING_DOUBLE } from "../constants/styles";
 
 export type ColumnProps = {
   columns: TinaMarkdownContent[];
@@ -7,12 +8,28 @@ export type ColumnProps = {
 
 export default ({ columns }: ColumnProps): JSX.Element => (
   <div
-    className={styles.column}
+    style={styles.column}
   >
     {columns.map((a) => (
-      <div>
+      <div style={styles.div}>
         <TinaMarkdown content={a} />
       </div>
     ))}
   </div>
 );
+
+const styles: StyleSheet = {
+  column: {
+    display: "flex",
+    justifyContent: "space-around",
+    width: "90vw",
+  },
+  div: {
+    flex: 1,
+    padding: STYLES_PADDING_DOUBLE,
+  }
+  // TODO mixins
+  //   @include medium {
+  //     flex-direction: column;
+  // }
+}

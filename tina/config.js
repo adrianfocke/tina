@@ -1,5 +1,5 @@
 import { defineConfig, defineSchema } from "tinacms";
-import { Column, ResponsiveImage } from "./templates";
+import { Button, Column, ResponsiveImage } from "./templates";
 
 const schema = defineSchema({
   collections: [
@@ -14,7 +14,7 @@ const schema = defineSchema({
           label: "Body",
           type: "rich-text",
           isBody: true,
-          templates: [ResponsiveImage, Column],
+          templates: [Button, ResponsiveImage, Column],
         },
       ],
       ui: {

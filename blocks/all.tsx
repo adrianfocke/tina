@@ -1,6 +1,7 @@
 import { TinaMarkdownContent } from "tinacms/dist/rich-text";
-import Column, { ColumnProps } from "./Column";
+import Column from "./Column";
 import ResponsiveImage, { ResponsiveImageProps } from "./ResponsiveImage";
+import Button, { ButtonProps } from "./Button";
 
 const components = {
   ResponsiveImage: (props) => {
@@ -42,6 +43,10 @@ const components = {
     }
 
     return <Column columns={columns} />;
+  },
+  Button: (props) => {
+    const { label, icon } = props as ButtonProps;
+    return <Button label={label} icon={icon} />
   },
 };
 

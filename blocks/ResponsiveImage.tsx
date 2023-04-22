@@ -1,6 +1,6 @@
 import { HeightUnit, WidthUnit } from "../types/units";
 import Image from "next/image";
-import styles from "./ResponsiveImage.module.scss";
+import { StyleSheet } from "../types/other";
 
 export type ResponsiveImageProps = {
   height: number;
@@ -28,8 +28,8 @@ export default ({
   withBoxShadow,
 }: ResponsiveImageProps): JSX.Element => (
   <div
-    className={`${styles.image} ${withBoxShadow && styles.withBoxShadow}`}
     style={{
+      ...styles.image,
       height: `${height}${heightUnit}`,
       width: `${width}${widthUnit}`,
     }}
@@ -37,3 +37,13 @@ export default ({
     <Image alt="IMAGE" src={src} objectFit={objectFit} priority={priority} fill sizes="100vw" />
   </div>
 );
+
+const styles: StyleSheet = {
+  image: {
+    overflow: "hidden",
+    position: "relative",
+  },
+  withBoxShadow: {
+    boxShadow: "$box-shadow",
+  }
+}
