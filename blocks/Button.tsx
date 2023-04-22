@@ -1,6 +1,7 @@
 import { STYLES_PADDING, STYLES_PADDING_HALF, TEST } from "../constants/styles";
 import { StyleSheet } from "../types/other";
 import Image from "next/image";
+import ResponsiveImage from "./ResponsiveImage";
 
 export type ButtonProps = {
   label: string;
@@ -10,6 +11,7 @@ export type ButtonProps = {
   };
 };
 
+const src = require("../public/uploads/openInNewTab.svg")
 
 // TODO move and think about type exports
 const Icon = ({ icon }: Pick<ButtonProps, "icon">) => (
@@ -28,6 +30,7 @@ export default ({ label, icon }: ButtonProps): JSX.Element => {
     <div style={styles.button}>
       {icon?.position === "left" && <Icon icon={icon} />}
       <span>{label}</span>
+      <ResponsiveImage height={20} image={src} objectFit={"-moz-initial"} width={20} />
       {icon?.position === "right" && <Icon icon={icon} />}
     </div>
   );
