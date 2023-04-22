@@ -35,7 +35,7 @@ export default ({
       alt="IMAGE"
       src={image}
       objectFit={objectFit}
-      priority={priority}
+      priority
       fill
       sizes="100vw"
     />

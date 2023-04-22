@@ -10,8 +10,8 @@ export default ({ columns }: ColumnProps): JSX.Element => (
   <div
     style={styles.column}
   >
-    {columns.map((a) => (
-      <div style={styles.div}>
+    {columns.map((a, i) => (
+      <div key={i} style={styles.div}>
         <TinaMarkdown content={a} />
       </div>
     ))}
