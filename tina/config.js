@@ -1,4 +1,5 @@
 import { defineConfig, defineSchema } from "tinacms";
+import { Column, ResponsiveImage } from "./templates";
 
 const schema = defineSchema({
   collections: [
@@ -13,84 +14,7 @@ const schema = defineSchema({
           label: "Body",
           type: "rich-text",
           isBody: true,
-          templates: [
-            {
-              label: "ResponsiveImage",
-              name: "ResponsiveImage",
-              ui: {
-                defaultItem: {
-                  height: 200,
-                  heightUnit: "px",
-                  image: "/uploads/muffin.jpg",
-                  objectFit: "cover",
-                  width: 200,
-                  widthUnit: "px",
-                  withBoxShadow: false,
-                },
-              },
-              fields: [
-                {
-                  label: "Background Image",
-                  name: "image",
-                  type: "image",
-                },
-                {
-                  label: "Height",
-                  name: "height",
-                  type: "number",
-                },
-                {
-                  label: "Height unit",
-                  name: "heightUnit",
-                  options: ["px", "%", "vh"],
-                  type: "string",
-                },
-                {
-                  label: "Width",
-                  name: "width",
-                  type: "number",
-                },
-                {
-                  label: "Width unit",
-                  name: "widthUnit",
-                  options: ["px", "%", "vw"],
-                  type: "string",
-                },
-                {
-                  label: "Style",
-                  name: "objectFit",
-                  options: ["cover", "contain"],
-                  type: "string",
-                },
-                {
-                  label: "Shadow",
-                  name: "withBoxShadow",
-                  type: "boolean",
-                },
-              ],
-            },
-            {
-              label: "Column",
-              name: "Column",
-              fields: [
-                {
-                  label: "Column One",
-                  name: "columnOne",
-                  type: "rich-text",
-                },
-                {
-                  label: "Column Two",
-                  name: "columnTwo",
-                  type: "rich-text",
-                },
-                {
-                  label: "Column Three",
-                  name: "columnThree",
-                  type: "rich-text",
-                },
-              ],
-            },
-          ],
+          templates: [ResponsiveImage, Column],
         },
       ],
       ui: {
@@ -117,19 +41,7 @@ const schema = defineSchema({
           label: "Blog Post Body",
           name: "body",
           isBody: true,
-          templates: [
-            {
-              name: "ResponsiveImage",
-              label: "ResponsiveImage",
-              fields: [
-                {
-                  name: "message",
-                  label: "Message",
-                  type: "string",
-                },
-              ],
-            },
-          ],
+          templates: [ResponsiveImage],
         },
       ],
       ui: {
