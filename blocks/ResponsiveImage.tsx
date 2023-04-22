@@ -13,10 +13,6 @@ export type ResponsiveImageProps = {
   withBoxShadow?: boolean;
 };
 
-const src = require("../public/uploads/joy.jpeg");
-
-// TODO alt
-
 export default ({
   height,
   heightUnit,
@@ -35,9 +31,9 @@ export default ({
     }}
   >
     <Image
+      // TODO
       alt="IMAGE"
-      // TODO remove src
-      src={image ?? src}
+      src={image}
       objectFit={objectFit}
       priority={priority}
       fill
