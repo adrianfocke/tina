@@ -41,6 +41,7 @@ export default ({ label, url, icon }: ButtonProps): JSX.Element => {
 
 const styles: StyleSheet = {
   button: {
+    justifyContent: "center",
     display: "flex",
     alignItems: "center",
     padding: STYLES_PADDING_HALF,
