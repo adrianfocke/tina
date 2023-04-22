@@ -19,6 +19,11 @@ export const Button: Template = {
       type: "string",
     },
     {
+      label: "URL",
+      name: "url",
+      type: "string",
+    },
+    {
       label: "Icon",
       name: "icon",
       type: "object",

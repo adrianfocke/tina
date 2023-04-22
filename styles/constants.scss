@@ -24,6 +24,7 @@ $factor-percent: 4%;
 $primary: rgb(75 14 138);
 $secondary: rgb(21 108 237);
 $black: #02020f;
+// TODO color for svgs
 $white: darken(rgb(252 253 251), $factor-percent);
 
 $primary-tint: lighten($primary, 20%);

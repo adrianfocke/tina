@@ -1,4 +1,6 @@
 import { Template } from "tinacms";
+// TODO makes sense?
+import { Button } from "./index";
 
 export const Column: Template = {
   label: "Column",
@@ -7,19 +9,19 @@ export const Column: Template = {
     {
       label: "Column One",
       name: "columnOne",
-      templates: [],
+      templates: [Button],
       type: "rich-text",
     },
     {
       label: "Column Two",
       name: "columnTwo",
-      templates: [],
+      templates: [Button],
       type: "rich-text",
     },
     {
       label: "Column Three",
       name: "columnThree",
-      templates: [],
+      templates: [Button],
       type: "rich-text",
     },
   ],

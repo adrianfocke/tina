@@ -45,8 +45,8 @@ const components = {
     return <Column columns={columns} />;
   },
   Button: (props) => {
-    const { label, icon } = props as ButtonProps;
-    return <Button label={label} icon={icon} />
+    const { label, url, icon } = props as ButtonProps;
+    return <Button label={label} url={url} icon={icon} />
   },
 };
 
