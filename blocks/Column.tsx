@@ -1,6 +1,7 @@
 import { TinaMarkdown, TinaMarkdownContent } from "tinacms/dist/rich-text";
-import { StyleSheet } from "../types/other";
 import { STYLES_PADDING_DOUBLE } from "../constants/styles";
+import responsive from "../styles/responsive.module.scss";
+import { StyleSheet } from "../types/other";
 import components from "./all";
 
 export type ColumnProps = {
@@ -9,6 +10,7 @@ export type ColumnProps = {
 
 export default ({ columns }: ColumnProps): JSX.Element => (
   <div
+    className={responsive.responsiveFlexDudeRenameBoyNice}
     style={styles.column}
   >
     {columns.map((a, i) => (
@@ -28,9 +30,9 @@ const styles: StyleSheet = {
   div: {
     flex: 1,
     padding: STYLES_PADDING_DOUBLE,
-  }
+  },
   // TODO mixins
   //   @include medium {
   //     flex-direction: column;
   // }
-}
+};
