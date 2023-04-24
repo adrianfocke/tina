@@ -36,7 +36,6 @@ export default ({
       }}
     >
       <Image
-        // TODO
         alt="IMAGE"
         src={img}
         objectFit={objectFit}

@@ -31,8 +31,4 @@ const styles: StyleSheet = {
     flex: 1,
     padding: STYLES_PADDING_DOUBLE,
   },
-  // TODO mixins
-  //   @include medium {
-  //     flex-direction: column;
-  // }
 };
