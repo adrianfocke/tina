@@ -77,6 +77,10 @@ export const config = defineConfig({
     outputFolder: "admin", // within the public folder
   },
   schema,
+  cmsCallback: cms => {
+    cms.flags.set("branch-switcher", true);
+    return cms;
+  }
 });
 
 export default config;
