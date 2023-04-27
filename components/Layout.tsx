@@ -6,7 +6,7 @@ import { StyleSheet } from "../types/other";
 
 export const Layout = (props) => {
   return (
-    <>
+    <div style={{backgroundColor: "rgb(75 14 138)"}}>
       <Head>
         <title>{APP_TITLE}</title>
         <meta name="description" content={APP_DESCRIPTION} />
@@ -26,7 +26,7 @@ export const Layout = (props) => {
           Imprint
         </Link>
       </header>
-    </>
+    </div>
   );
 };
 
